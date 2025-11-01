@@ -15,7 +15,9 @@ SERVICE_NAME="forge-clone-agent"
 BINARY_NAME="forge-clone-agent"
 
 # Download URLs (can be overridden via environment variables)
-DOWNLOAD_BASE_URL="${FORGE_CLONE_DOWNLOAD_URL:-https://github.com/ahmetbarut/forge-clone/releases/latest/download}"
+DOWNLOAD_BASE_URL="${FORGE_CLONE_DOWNLOAD_URL:-FORGE_CLONE_DOWNLOAD_URL=https://raw.githubusercontent.com/ahmetbarut/agent/refs/heads/main/forge-clone-agent}"
+echo "DOWNLOAD_BASE_URL: ${DOWNLOAD_BASE_URL}"
+exit 1;
 BINARY_URL="${DOWNLOAD_BASE_URL}"
 
 echo -e "${GREEN}Forge Clone Agent Installation${NC}"
